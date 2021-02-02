@@ -41,7 +41,13 @@ jobs:
       bitbake smartracks-minimal-image
       cd deploy/images/apalis-imx8x-smartracks
       mkdir -p build-$(Build.BuildNumber)
+      echo "--1--"
+      ls -1
       cp $(find . -name 'Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
+      cd build-$(Build.BuildNumber)
+      echo "--2--"
+      ls -1
+      cd ..
       cp -r build-$(Build.BuildNumber) /mnt/nirvana/perforceExports/smartracks/testing123
       #mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
       #cd deploy/images/apalis-imx8x
