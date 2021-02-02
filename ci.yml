@@ -34,9 +34,6 @@ jobs:
       - Agent.OS -equals Linux
   
   steps:
-  - checkout: self
-    submodules: true
-  - checkout: smartracks-manifest
   - script: |
       repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       repo sync
