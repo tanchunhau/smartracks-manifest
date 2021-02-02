@@ -39,17 +39,10 @@ jobs:
       repo sync
       . export
       bitbake smartracks-minimal-image
-      echo "--1--"
-      ls -1
-      echo "--2--"
-      cd deploy
-      ls -1
-      echo "--3--"
-      cd images
-      ls -1
-      echo "--4--"
-      cd apalis-imx8x-smartracks
-      ls -1
-      mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
+      cd deploy/images/apalis-imx8x-smartracks
+      mkdir -p build-$(Build.BuildNumber)
+      cp $(find . -name 'Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
+      cp -r build-$(Build.BuildNumber) /mnt/nirvana/perforceExports/smartracks/testing123
+      #mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
       #cd deploy/images/apalis-imx8x
-      cp $(find . -name 'Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_*.tar') /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
+      #cp $(find . -name 'Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_*.tar') /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
