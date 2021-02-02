@@ -48,8 +48,8 @@ jobs:
       cd images
       ls -1
       echo "--4--"
-      cd apalis-imx8x
+      cd apalis-imx8x-smartracks
       ls -1
       mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
       #cd deploy/images/apalis-imx8x
-      #cp $(find . -name 'Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_*.tar') /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
+      cp $(find . -name 'Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_*.tar') /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
