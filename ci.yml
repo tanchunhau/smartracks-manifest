@@ -43,7 +43,7 @@ jobs:
       mkdir -p build-$(Build.BuildNumber)
       echo "--1--"
       ls -1
-      cp $(find . -name 'Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
+      cp $(find . -name 'Apalis-iMX8X-SmartRacks_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
       cd build-$(Build.BuildNumber)
       echo "--2--"
       ls -1
