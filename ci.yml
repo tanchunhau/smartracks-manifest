@@ -48,7 +48,8 @@ jobs:
       echo "--2--"
       ls -1
       cd ..
-      cp -r build-$(Build.BuildNumber) /mnt/nirvana/perforceExports/smartracks/testing123
+      cp -R build-$(Build.BuildNumber) /mnt/nirvana/perforceExports/smartracks/testing123
+      echo $(Build.BuildNumber)
       #mkdir -p /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
       #cd deploy/images/apalis-imx8x
       #cp $(find . -name 'Apalis-iMX8X_Reference-Minimal-Image-rt-Tezi_*.tar') /mnt/nirvana/perforceExports/smartracks/testing123/build-$(Build.BuildNumber)
