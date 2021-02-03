@@ -24,7 +24,7 @@ resources:
     - /mnt:/mnt
          
 jobs:
-- job: OpenEmbedded Build & Export
+- job: OpenEmbedded_Build_And_Export
   container: smartracks-build
   timeoutInMinutes: 3600
   pool:
