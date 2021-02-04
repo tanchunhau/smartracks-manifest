@@ -39,6 +39,7 @@ jobs:
   - script: |
       #cd /home/rfmibuild_azpcontainer/rcu-service
       #ls  -la
+      rm .repo
       repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       ls  -la
       #cd smartracks-manifest
