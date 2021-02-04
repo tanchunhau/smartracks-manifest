@@ -43,6 +43,7 @@ jobs:
       
       echo "ff--"
       ls -la
+      repo init -m smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #cd smartracks-manifest
       #ls  -1
