@@ -38,10 +38,14 @@ jobs:
   - checkout: rcu-service
   - script: |
       mkdir temp
+      echo "abc---"
       cp $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml temp/manifest.xml
-      cd temp
+      repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main
+      cp temp/manifest.xml $(Build.SourcesDirectory)/smartracks-manifest
+      repo init -m manifest.xml
+      
       #cd smartracks-manifest
-      ls  -1
+      #ls  -1
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       #echo "t25-"
       #ls  -1
