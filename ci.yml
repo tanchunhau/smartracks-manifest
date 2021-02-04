@@ -38,8 +38,10 @@ jobs:
   - checkout: rcu-service
   - script: |
       ls -la
-      repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      
+      cd .repo
+      echo "ff--"
+      ls -la
+      #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #cd smartracks-manifest
       #ls  -1
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
