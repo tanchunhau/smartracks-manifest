@@ -45,7 +45,7 @@ jobs:
       cd $(Build.SourcesDirectory)/smartracks-manifest
       ls -la
        echo "abc---"
-      cd ~/bin/repo/smartracks-manifest
+      cd /bin/repo/smartracks-manifest
       ls -la
       repo init -m manifest.xml
       
