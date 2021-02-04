@@ -40,7 +40,7 @@ jobs:
       echo "tgg-"
       cd $(Build.SourcesDirectory)/smartracks-manifest
       ls -la
-      repo init -u . -m smartracks-manifest.xml
+      repo init -u $(Build.SourcesDirectory)/smartracks-manifest/.git -m smartracks-manifest.xml
       #echo "t25-"
       #ls  -1
       #cd $(Build.SourcesDirectory)/smartracks-manifest
