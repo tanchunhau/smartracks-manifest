@@ -35,9 +35,10 @@ jobs:
   
   steps:
   - checkout: smartracks-manifest
-     path: s/smartracks-manifest
   - checkout: rcu-service
   - script: |
+      mkdir temp
+      cp $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml temp
       #cd smartracks-manifest
       ls  -1
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
