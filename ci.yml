@@ -37,12 +37,8 @@ jobs:
   - checkout: smartracks-manifest
   - checkout: rcu-service
   - script: |
-      ls -la
       cp $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml $(Build.SourcesDirectory)
       repo init -m smartracks-manifest.xml
-      
-      echo "ff--"
-      ls -la
       repo init -m smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #cd smartracks-manifest
@@ -56,8 +52,8 @@ jobs:
       #repo init -m smartracks-manifest.xml
       #repo init -m /home/rfmibuild_azpcontainer/smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      #repo sync
-      #. export
+      repo sync
+      . export
       #bitbake smartracks-minimal-image
       #mkdir -p build-$(Build.BuildNumber)
       #cp deploy/images/apalis-imx8x-smartracks/$(find . -name 'Apalis-iMX8X-SmartRacks_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
