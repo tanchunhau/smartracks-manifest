@@ -39,7 +39,7 @@ jobs:
   - script: |
       ls -la
       cp $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml $(Build.SourcesDirectory)
-      repo -m smartracks-manifest.xml
+      repo init -m smartracks-manifest.xml
       
       echo "ff--"
       ls -la
