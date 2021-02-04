@@ -37,18 +37,7 @@ jobs:
   - checkout: smartracks-manifest
   - checkout: rcu-service
   - script: |
-      mkdir temp
-      echo "abc---"
-      cp $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml temp/manifest.xml
       repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      cp temp/manifest.xml $(Build.SourcesDirectory)/smartracks-manifest
-      cd $(Build.SourcesDirectory)/smartracks-manifest
-      ls -la
-       echo "abc---"
-      cd /bin/repo/smartracks-manifest
-      ls -la
-      repo init -m manifest.xml
-      
       #cd smartracks-manifest
       #ls  -1
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
