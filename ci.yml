@@ -43,7 +43,7 @@ jobs:
       #echo "t25-"
       #ls  -1
       #cd $(Build.SourcesDirectory)/smartracks-manifest
-      repo init -m ./repo/smartracks-manifest.xml
+      #repo init -m ./repo/smartracks-manifest.xml
       #repo init -u ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
       #repo init -m smartracks-manifest.xml
       #repo init -m /home/rfmibuild_azpcontainer/smartracks-manifest.xml
