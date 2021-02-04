@@ -38,9 +38,9 @@ jobs:
   - checkout: rcu-service
   - script: |
       echo "tgg-"
-      cd $(Build.SourcesDirectory)
+      cd $(Build.SourcesDirectory)/smartracks-manifest
       ls -la
-      repo init -m smartracks-manifest.xml
+      repo init -u . -m smartracks-manifest.xml
       #echo "t25-"
       #ls  -1
       #cd $(Build.SourcesDirectory)/smartracks-manifest
