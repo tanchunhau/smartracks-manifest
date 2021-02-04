@@ -35,7 +35,7 @@ jobs:
   
   steps:
   - checkout: smartracks-manifest
-        path: s/temp
+        #path: s/temp
   - checkout: rcu-service
   - script: |
       #cd smartracks-manifest
