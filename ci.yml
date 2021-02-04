@@ -38,10 +38,9 @@ jobs:
   - checkout: rcu-service
   - script: |
      
-      cd ~/bin/repo
       echo "t25-"
       ls  -1
-      repo init -m $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml
+      repo init -u $(Build.SourcesDirectory)/smartracks-manifest -m smartracks-manifest.xml
       #repo init -u ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
       #repo init -m smartracks-manifest.xml
       #repo init -m /home/rfmibuild_azpcontainer/smartracks-manifest.xml
