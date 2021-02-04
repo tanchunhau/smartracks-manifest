@@ -43,8 +43,6 @@ jobs:
       #cd smartracks-manifest
       #ls  -1
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
-      #echo "t25-"
-      #ls  -1
       #cd $(Build.SourcesDirectory)/smartracks-manifest
       #repo init -m ./repo/smartracks-manifest.xml
       #repo init -u ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
