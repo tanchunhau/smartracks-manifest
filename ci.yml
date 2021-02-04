@@ -38,7 +38,9 @@ jobs:
   - checkout: rcu-service
   - script: |
       ls -la
-      sleep 3
+       echo "12345"
+       echo "12345"
+       echo "12345"
       ls -la
       cp $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml $(Build.SourcesDirectory)
       repo init -m smartracks-manifest.xml
