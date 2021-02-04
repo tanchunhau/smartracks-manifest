@@ -35,13 +35,12 @@ jobs:
   
   steps:
   - checkout: smartracks-manifest
+        path: $(Build.SourcesDirectory)/temp
   - checkout: rcu-service
   - script: |
-      echo "tgg1-"
-      cd $(Build.SourcesDirectory)/smartracks-manifest
-      ls -la
-      repo init -m smartracks-manifest.xml
-      #repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
+      #cd smartracks-manifest
+      ls  -1
+      #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       #echo "t25-"
       #ls  -1
       #cd $(Build.SourcesDirectory)/smartracks-manifest
