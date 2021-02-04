@@ -38,17 +38,17 @@ jobs:
   - checkout: rcu-service
   - script: |
      
-      echo "t25-"
-      ls  -1
-      cd $(Build.SourcesDirectory)/smartracks-manifest
-      repo init -m smartracks-manifest.xml
+      #echo "t25-"
+      #ls  -1
+      #cd $(Build.SourcesDirectory)/smartracks-manifest
+      #repo init -m smartracks-manifest.xml
       #repo init -u ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
       #repo init -m smartracks-manifest.xml
       #repo init -m /home/rfmibuild_azpcontainer/smartracks-manifest.xml
-      #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
+      repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       repo sync
-      #. export
-      #bitbake smartracks-minimal-image
-      #mkdir -p build-$(Build.BuildNumber)
-      #cp deploy/images/apalis-imx8x-smartracks/$(find . -name 'Apalis-iMX8X-SmartRacks_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
-      #cp -R build-$(Build.BuildNumber) /mnt/nirvana/perforceExports/smartracks/testing123
+      . export
+      bitbake smartracks-minimal-image
+      mkdir -p build-$(Build.BuildNumber)
+      cp deploy/images/apalis-imx8x-smartracks/$(find . -name 'Apalis-iMX8X-SmartRacks_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
+      cp -R build-$(Build.BuildNumber) /mnt/nirvana/perforceExports/smartracks/testing123
