@@ -42,6 +42,7 @@ jobs:
       cp $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml temp/manifest.xml
       repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main
       cp temp/manifest.xml $(Build.SourcesDirectory)/smartracks-manifest
+      cd $(Build.SourcesDirectory)/smartracks-manifest
       repo init -m manifest.xml
       
       #cd smartracks-manifest
