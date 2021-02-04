@@ -35,11 +35,10 @@ jobs:
   
   steps:
   - checkout: smartracks-manifest
-        path: /home/temp
+        path: s/temp
   - checkout: rcu-service
   - script: |
       #cd smartracks-manifest
-      cd /home
       ls  -1
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       #echo "t25-"
