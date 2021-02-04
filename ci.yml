@@ -40,7 +40,7 @@ jobs:
       echo "--t1--"
       ls -1
       echo "--t2--"
-      cd /home
+      cd /home/rfmibuild_azpcontainer
       ls -1
       #repo init -m smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
