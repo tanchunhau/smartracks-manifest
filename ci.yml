@@ -37,16 +37,14 @@ jobs:
   - checkout: smartracks-manifest
     submodules: true
   - script: |
-      echo "--t1--"
+      echo "--t5--"
       ls -1
-      echo "--t3--"
-      cd ~/bin/repo/smartracks-manifest
-      ls -1
-      repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
+      repo init -u $(Build.SourcesDirectory)/smartracks-manifest
+      #repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
       #repo init -m smartracks-manifest.xml
       #repo init -m /home/rfmibuild_azpcontainer/smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      #repo sync
+      repo sync
       #. export
       #bitbake smartracks-minimal-image
       #mkdir -p build-$(Build.BuildNumber)
