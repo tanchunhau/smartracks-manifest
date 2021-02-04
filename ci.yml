@@ -37,11 +37,11 @@ jobs:
   - checkout: smartracks-manifest
   - checkout: rcu-service
   - script: |
-      echo "tgg-"
-      #cd $(Build.SourcesDirectory)/smartracks-manifest
+      echo "tgg1-"
+      cd $(Build.SourcesDirectory)/smartracks-manifest
       ls -la
-      #repo init -u $(Build.SourcesDirectory)/smartracks-manifest/.git -m smartracks-manifest.xml
-      repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
+      repo init -m smartracks-manifest.xml
+      #repo init -m ~/bin/repo/smartracks-manifest/smartracks-manifest.xml
       #echo "t25-"
       #ls  -1
       #cd $(Build.SourcesDirectory)/smartracks-manifest
