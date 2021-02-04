@@ -40,7 +40,6 @@ jobs:
       sleep 3
       cp $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml $(Build.SourcesDirectory)
       repo init -m smartracks-manifest.xml
-      repo init -m smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #cd smartracks-manifest
       #ls  -1
