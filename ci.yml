@@ -38,7 +38,9 @@ jobs:
   - checkout: rcu-service
   - script: |
       ls -la
-      cd .repo
+      cp $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml $(Build.SourcesDirectory)
+      repo -m smartracks-manifest.xml
+      
       echo "ff--"
       ls -la
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
