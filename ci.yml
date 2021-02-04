@@ -44,6 +44,9 @@ jobs:
       cp temp/manifest.xml $(Build.SourcesDirectory)/smartracks-manifest
       cd $(Build.SourcesDirectory)/smartracks-manifest
       ls -la
+       echo "abc---"
+      cd ~/bin/repo/smartracks-manifest
+      ls -la
       repo init -m manifest.xml
       
       #cd smartracks-manifest
