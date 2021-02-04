@@ -40,7 +40,7 @@ jobs:
       mkdir temp
       echo "abc---"
       cp $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml temp/manifest.xml
-      repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main
+      repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main
       cp temp/manifest.xml $(Build.SourcesDirectory)/smartracks-manifest
       repo init -m manifest.xml
       
