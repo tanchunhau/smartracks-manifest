@@ -45,7 +45,7 @@ jobs:
       ls -la
       
       
-      repo init -ucd $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
+      repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #ls  -la
