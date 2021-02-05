@@ -38,11 +38,17 @@ jobs:
   - checkout: rcu-service
   - script: |
       echo "-1-"
-      sed -i 's|PathToBeDefine|$(Build.SourcesDirectory)|g' $(Build.SourcesDirectory)/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
-      cat $(Build.SourcesDirectory)/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
+      #sed -i 's|PathToBeDefine|$(Build.SourcesDirectory)|g' $(Build.SourcesDirectory)/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
+      #cat $(Build.SourcesDirectory)/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
       rm -r .repo
-      repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      ls  -la
+      cd $(Build.SourcesDirectory)/smartracks-manifest
+      ls -la
+      
+      
+      #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
+      
+      #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
+      #ls  -la
       #cd smartracks-manifest
       #ls  -1
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
@@ -52,10 +58,10 @@ jobs:
       #repo init -m smartracks-manifest.xml
       #repo init -m /home/rfmibuild_azpcontainer/smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      repo sync
-      . export
+      #repo sync
+      #. export
       #bitbake rcu-service
-      bitbake smartracks-minimal-image
+      #bitbake smartracks-minimal-image
       #mkdir -p build-$(Build.BuildNumber)
       #cp deploy/images/apalis-imx8x-smartracks/$(find . -name 'Apalis-iMX8X-SmartRacks_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
       #cp -R build-$(Build.BuildNumber) /mnt/nirvana/perforceExports/smartracks/testing123
