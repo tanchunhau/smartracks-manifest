@@ -48,6 +48,7 @@ jobs:
       ls  -la
       echo "-4-"
       echo $(Build.SourcesDirectory)
+      echo "-5-"
       cd $(Build.SourcesDirectory)
       ls  -la
       rm -r .repo
