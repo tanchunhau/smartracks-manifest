@@ -46,7 +46,9 @@ jobs:
       echo "-3-"
       cd rcu-service
       ls  -la
+      echo "-4-"
       cd $(Build.SourcesDirectory)
+      ls  -la
       rm -r .repo
       repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       ls  -la
