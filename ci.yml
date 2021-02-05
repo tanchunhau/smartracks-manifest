@@ -42,10 +42,10 @@ jobs:
       ls  -1
       echo "-2-"
       cd rfmibuild_azpcontainer
-      ls  -1
+      ls  -la
       echo "-3-"
       cd rcu-service
-      ls  -1
+      ls  -la
       cd $(Build.SourcesDirectory)
       rm -r .repo
       repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
