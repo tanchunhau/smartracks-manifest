@@ -18,7 +18,7 @@ resources:
     endpoint: smartracks
   containers:
   - container: smartracks-build
-    image: rnd-builds.repos.natinst.com/smartracks/smartracks-build:1
+    image: rnd-builds.repos.natinst.com/smartracks/smartracks-build:0
     options:
     volumes:
     - /mnt:/mnt
