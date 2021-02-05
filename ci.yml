@@ -45,6 +45,9 @@ jobs:
       ls -la
       
       cd $(Build.SourcesDirectory)/smartracks-manifest
+      echo "-12-"
+      git branch
+      echo "-13-"
       repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       
