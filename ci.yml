@@ -42,11 +42,14 @@ jobs:
       #cat $(Build.SourcesDirectory)/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
       rm -r .repo
       
-      ls -la
+      
       
       cd $(Build.SourcesDirectory)/smartracks-manifest
+      echo "-11-"
+      ls -la
       echo "-12-"
       git branch
+      git checkout -b main
       echo "-13-"
       repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
