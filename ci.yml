@@ -44,7 +44,7 @@ jobs:
       cd rfmibuild_azpcontainer
       ls  -la
       echo "-3-"
-      cd rcu-service
+      cd rfmibuild_azpcontainer 
       ls  -la
       echo "-4-"
       cd $(Build.SourcesDirectory)
