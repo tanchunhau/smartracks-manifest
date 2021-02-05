@@ -47,6 +47,7 @@ jobs:
       cd rfmibuild_azpcontainer 
       ls  -la
       echo "-4-"
+      echo $(Build.SourcesDirectory)
       cd $(Build.SourcesDirectory)
       ls  -la
       rm -r .repo
