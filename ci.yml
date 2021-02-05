@@ -38,7 +38,7 @@ jobs:
   - checkout: rcu-service
   - script: |
       echo "-1-"
-      cp -R $(Build.SourcesDirectory)/rcu-service /home
+      cp -R $(Build.SourcesDirectory)/rcu-service /home/oe-builder
       rm -r .repo
       repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       ls  -la
