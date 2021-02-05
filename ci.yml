@@ -41,7 +41,7 @@ jobs:
       cd /home
       ls  -1
       echo "-2-"
-      cd oe-builder
+      cd rfmibuild_azpcontainer
       ls  -la
       echo "-3-"
       cd rcu-service
