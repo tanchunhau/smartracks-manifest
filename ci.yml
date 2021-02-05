@@ -37,8 +37,10 @@ jobs:
   - checkout: smartracks-manifest
   - checkout: rcu-service
   - script: |
-      #cd /home/rfmibuild_azpcontainer/rcu-service
-      #ls  -la
+      cd /home/rfmibuild_azpcontainer/rcu-service
+      ls  -la
+      echo "-gg-"
+      cd $(Build.SourcesDirectory)
       rm -r .repo
       repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       ls  -la
