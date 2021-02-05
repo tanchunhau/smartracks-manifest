@@ -59,7 +59,7 @@ jobs:
       #repo init -m /home/rfmibuild_azpcontainer/smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       repo init
-      repo sync -m  $(Build.SourcesDirectory)/smartracks-manifest/martracks-manifest.xml
+      repo sync -m  $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml
       . export
       #bitbake rcu-service
       #bitbake smartracks-minimal-image
