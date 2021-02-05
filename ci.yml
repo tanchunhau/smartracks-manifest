@@ -40,7 +40,7 @@ jobs:
       echo "-1-"
       #chmod +x $(Build.SourcesDirectory)/rcu-service
       #cp -R $(Build.SourcesDirectory)/rcu-service /home/oe-builder
-      sed -i 's/PathToBeDefine/$(Build.SourcesDirectory)/g' $(Build.SourcesDirectory)/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
+      sed -i 's|PathToBeDefine|$(Build.SourcesDirectory)|g' $(Build.SourcesDirectory)/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
       rm -r .repo
       repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       ls  -la
