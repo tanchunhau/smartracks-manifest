@@ -52,10 +52,10 @@ jobs:
       #repo init -m smartracks-manifest.xml
       #repo init -m /home/rfmibuild_azpcontainer/smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      #repo sync
-      #. export
+      repo sync
+      . export
       #bitbake rcu-service
-      #bitbake smartracks-minimal-image
+      bitbake smartracks-minimal-image
       #mkdir -p build-$(Build.BuildNumber)
       #cp deploy/images/apalis-imx8x-smartracks/$(find . -name 'Apalis-iMX8X-SmartRacks_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
       #cp -R build-$(Build.BuildNumber) /mnt/nirvana/perforceExports/smartracks/testing123
