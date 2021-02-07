@@ -46,26 +46,14 @@ jobs:
       cd $(Build.SourcesDirectory)/smartracks-manifest
       git branch
       git checkout -b main
-      echo "-13-"
       repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
-      
-      
       repo sync
-      #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
-      
-      #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      ls  -la
-      #cd smartracks-manifest
-      #ls  -1
-      
-      echo "-14-"
-      cd layers
-      rm -r meta-smartracks
-      ls  -la
+      rm -r layers/meta-smartracks
       cp  -r $(Build.SourcesDirectory)/meta-smartracks $(Build.SourcesDirectory)/smartracks-manifest/layers
-      echo "-15-"
-      ls  -la
-      cd ..
+      sed -i 's|PathToBeDefine|$(Build.SourcesDirectory)/smartracks-manifest|g' $(Build.SourcesDirectory)/smartracks-manifest/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
+      . export
+      bitbake rcu-service
+      
       
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       #cd $(Build.SourcesDirectory)/smartracks-manifest
@@ -77,7 +65,7 @@ jobs:
       #repo init
        
       #repo sync -m  $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml
-      . export
+      
       
   
       #bitbake rcu-service
