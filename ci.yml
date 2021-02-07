@@ -52,8 +52,7 @@ jobs:
       git checkout -b main
       echo "-13-"
       repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
-      cd ..
-      repo sync -m smartracks-manifest/smartracks-manifest.xml
+      repo sync
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
