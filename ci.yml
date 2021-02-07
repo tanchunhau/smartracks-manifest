@@ -59,6 +59,12 @@ jobs:
       ls  -la
       #cd smartracks-manifest
       #ls  -1
+      
+      echo "-14-"
+      cd layers
+       ls  -la
+       cd ..
+      
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       #cd $(Build.SourcesDirectory)/smartracks-manifest
       #repo init -m ./repo/smartracks-manifest.xml
@@ -70,6 +76,8 @@ jobs:
        
       #repo sync -m  $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml
       . export
+      
+  
       #bitbake rcu-service
       #bitbake smartracks-minimal-image
       #mkdir -p build-$(Build.BuildNumber)
