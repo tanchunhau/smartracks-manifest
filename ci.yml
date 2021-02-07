@@ -52,16 +52,7 @@ jobs:
       git checkout -b main
       echo "-13-"
       repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
-      
-     # mkdir -p .repo/local_manifests
-     # cat > .repo/local_manifests/remove-meta-smartracks.xml <<EOF
-     # <?xml version="1.0" encoding="UTF-8"?>
-     # <manifest>
-     #   <remove-project name="meta-smartracks" />
-     # </manifest>
-     # EOF
-
-      repo sync --force-sync
+      repo sync
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
@@ -72,7 +63,7 @@ jobs:
       echo "-14-"
       cd layers
        ls  -la
-      
+       cd ..
       
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       #cd $(Build.SourcesDirectory)/smartracks-manifest
