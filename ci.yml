@@ -66,9 +66,13 @@ jobs:
       echo "-14-"
       cd layers
       
-      rm -r meta-smartracks
-      cp  -r $(Build.SourcesDirectory)/meta-smartracks $(Build.SourcesDirectory)/smartracks-manifest
       
+      rm -r meta-smartracks
+      
+      ls  -la
+      
+      cp  -r $(Build.SourcesDirectory)/meta-smartracks $(Build.SourcesDirectory)/smartracks-manifest
+      echo "-15-"
       
        ls  -la
        cd ..
