@@ -41,7 +41,7 @@ jobs:
       #sed -i 's|PathToBeDefine|$(Build.SourcesDirectory)|g' $(Build.SourcesDirectory)/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
       #cat $(Build.SourcesDirectory)/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
       rm -r .repo
-      
+      ls -la
       
       
       cd $(Build.SourcesDirectory)/smartracks-manifest
@@ -65,7 +65,7 @@ jobs:
       echo "-14-"
       cd layers
       
-      rmdir meta-smartracks
+      rmdir -p meta-smartracks
       cp  -r $(Build.SourcesDirectory)/meta-smartracks $(Build.SourcesDirectory)/smartracks-manifest
       
       
