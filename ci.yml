@@ -60,12 +60,10 @@ jobs:
      #   <remove-project name="meta-smartracks" />
      # </manifest>
      # EOF
-     
-      cd ..
-      
+
       repo forall -c git clean -fd
       repo forall -c git reset --hard
-      repo sync --force-sync -u  $(Build.SourcesDirectory)/smartracks-manifest -m smartracks-manifest.xml
+      repo sync --force-sync
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
