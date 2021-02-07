@@ -61,8 +61,6 @@ jobs:
      # </manifest>
      # EOF
 
-      repo forall -c git clean -fd
-      repo forall -c git reset --hard
       repo sync --force-sync
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       
