@@ -52,10 +52,12 @@ jobs:
       git checkout -b main
       echo "-13-"
       repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
+      cd ..
+      repo sync -m smartracks-manifest/smartracks-manifest.xml
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
-      #ls  -la
+      ls  -la
       #cd smartracks-manifest
       #ls  -1
       #repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
@@ -66,7 +68,7 @@ jobs:
       #repo init -m /home/rfmibuild_azpcontainer/smartracks-manifest.xml
       #repo init -u https://github.com/tanchunhau/smartracks-manifest.git -b main -m smartracks-manifest.xml
       #repo init
-       repo sync
+       
       #repo sync -m  $(Build.SourcesDirectory)/smartracks-manifest/smartracks-manifest.xml
       . export
       #bitbake rcu-service
