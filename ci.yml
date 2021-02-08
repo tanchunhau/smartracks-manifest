@@ -58,7 +58,7 @@ jobs:
       cd ..
       rm -r layers/meta-smartracks
       cp  -r $(Build.SourcesDirectory)/meta-smartracks $(Build.SourcesDirectory)/smartracks-manifest/layers
-      cp  $(Build.SourcesDirectory)/meta-smartracks/ $(Build.SourcesDirectory)/smartracks-manifest
+      cp  $(Build.SourcesDirectory)/meta-smartracks/export $(Build.SourcesDirectory)/smartracks-manifest
       #sed -i 's|PathToBeDefine|$(Build.SourcesDirectory)|g' $(Build.SourcesDirectory)/smartracks-manifest/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
       sed -i 's|S = "${WORKDIR}/git"|#S = "${WORKDIR}/git"|g' $(Build.SourcesDirectory)/smartracks-manifest/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
       #cat $(Build.SourcesDirectory)/smartracks-manifest/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
