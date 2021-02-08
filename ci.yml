@@ -57,8 +57,8 @@ jobs:
       sed -i 's|S = "${WORKDIR}/git"|#S = "${WORKDIR}/git"|g' $(Build.SourcesDirectory)/smartracks-manifest/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
       . export
       echo "EXTERNALSRC_pn-rcu-service = \"$(Build.SourcesDirectory)/rcu-service\"" >> $(Build.SourcesDirectory)/smartracks-manifest/build/conf/local.conf
-      bitbake rcu-service
-      #bitbake smartracks-minimal-image
-      #mkdir -p build-$(Build.BuildNumber)
-      #cp deploy/images/apalis-imx8x-smartracks/$(find . -name 'Apalis-iMX8X-SmartRacks_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
-      #cp -R build-$(Build.BuildNumber) /mnt/nirvana/perforceExports/smartracks/testing123
+      #bitbake rcu-service
+      bitbake smartracks-minimal-image
+      mkdir -p build-$(Build.BuildNumber)
+      cp deploy/images/apalis-imx8x-smartracks/$(find . -name 'Apalis-iMX8X-SmartRacks_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
+      cp -R build-$(Build.BuildNumber) /mnt/nirvana/perforceExports/smartracks/testing123
