@@ -48,8 +48,9 @@ jobs:
       #sed -i 's|PathToBeDefine|$(Build.SourcesDirectory)|g' $(Build.SourcesDirectory)/smartracks-manifest/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
       sed -i 's|S = "${WORKDIR}/git"|#S = "${WORKDIR}/git"|g' $(Build.SourcesDirectory)/smartracks-manifest/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
       cat $(Build.SourcesDirectory)/smartracks-manifest/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
-      #. export
-      #bitbake rcu-service
+      . export
+      echo "EXTERNALSRC_pn-rcu-service = \"$(Build.SourcesDirectory)/rcu-service\"" >> $(Build.SourcesDirectory)/smartracks-manifest/build/conf/local.conf
+      bitbake rcu-service
       #bitbake smartracks-minimal-image
       #mkdir -p build-$(Build.BuildNumber)
       #cp deploy/images/apalis-imx8x-smartracks/$(find . -name 'Apalis-iMX8X-SmartRacks_Reference-Minimal-Image-rt-Tezi_*.tar') build-$(Build.BuildNumber)
