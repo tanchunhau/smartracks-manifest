@@ -59,6 +59,7 @@ jobs:
       cp  $(Build.SourcesDirectory)/meta-smartracks/buildconf/export $(Build.SourcesDirectory)/smartracks-manifest
       sed -i 's|S = "${WORKDIR}/git"|#S = "${WORKDIR}/git"|g' $(Build.SourcesDirectory)/smartracks-manifest/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
       . export
+      echo "INHERIT += \"externalsrc\"" >> $(Build.SourcesDirectory)/smartracks-manifest/build/conf/local.conf
       echo "EXTERNALSRC_pn-rcu-service = \"$(Build.SourcesDirectory)/rcu-service\"" >> $(Build.SourcesDirectory)/smartracks-manifest/build/conf/local.conf
       bitbake rcu-service
       #bitbake smartracks-minimal-image
