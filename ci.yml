@@ -42,7 +42,20 @@ jobs:
       git branch
       git checkout -b main
       repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
+      
+      mkdir -p .repo/local_manifests
+      cat > .repo/local_manifests/remove-meta-smartracks.xml <<EOF
+      <?xml version="1.0" encoding="UTF-8"?>
+      <manifest>
+        <remove-project name="meta-smartracks.git" />
+      </manifest>
+      EOF
+      
       repo sync
+      echo "--show after sync--"
+      cd layers
+      ls -la
+      cd ..
       rm -r layers/meta-smartracks
       cp  -r $(Build.SourcesDirectory)/meta-smartracks $(Build.SourcesDirectory)/smartracks-manifest/layers
       #sed -i 's|PathToBeDefine|$(Build.SourcesDirectory)|g' $(Build.SourcesDirectory)/smartracks-manifest/layers/meta-smartracks/recipes-core/rcu-service/rcu-service_1.0.bb
