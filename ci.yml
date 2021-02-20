@@ -38,8 +38,11 @@ jobs:
   
   steps:
   - checkout: smartracks-manifest
+    clean: true
   - checkout: rcu-service
+    clean: true
   - checkout: meta-smartracks
+    clean: true
   - script: |
       cd $(Build.SourcesDirectory)/smartracks-manifest
       git branch
