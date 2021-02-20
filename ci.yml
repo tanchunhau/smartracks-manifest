@@ -30,6 +30,8 @@ jobs:
 - job: OpenEmbedded_Build_And_Export
   container: smartracks-build
   timeoutInMinutes: 3600
+  workspace:
+     clean: all
   pool:
     name: Drivers-NIBuildFarm-RFMIBUILD
     demands:
@@ -57,6 +59,8 @@ jobs:
       </manifest>
       EOF
       
+      git clean -ffdx
+      git reset --hard HEAD
       repo sync --force-sync
       cp  -r $(Build.SourcesDirectory)/meta-smartracks $(Build.SourcesDirectory)/smartracks-manifest/layers
       cp  $(Build.SourcesDirectory)/meta-smartracks/buildconf/export $(Build.SourcesDirectory)/smartracks-manifest
