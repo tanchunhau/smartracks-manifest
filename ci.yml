@@ -10,5 +10,5 @@ resources:
     ref: refs/heads/main
     endpoint: smartracks
 
-
-template: pipeline/steps.yml@script
+steps:
+ -template: pipeline/steps.yml@script
