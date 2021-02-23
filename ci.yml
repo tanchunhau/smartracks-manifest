@@ -9,7 +9,4 @@ resources:
     name: tanchunhau/script
     ref: refs/heads/main
     endpoint: smartracks
-
-
-resources:
  - template: pipeline/steps.yml@script
