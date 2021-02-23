@@ -59,8 +59,8 @@ jobs:
       </manifest>
       EOF
       
-      git clean -ffdx
-      git reset --hard HEAD
+      #git clean -ffdx
+      #git reset --hard HEAD
       repo sync --force-sync
       cp  -r $(Build.SourcesDirectory)/meta-smartracks $(Build.SourcesDirectory)/smartracks-manifest/layers
       cp  $(Build.SourcesDirectory)/meta-smartracks/buildconf/export $(Build.SourcesDirectory)/smartracks-manifest
