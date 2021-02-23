@@ -39,19 +39,16 @@ jobs:
       - Agent.OS -equals Linux
   
   steps:
-  - checkout: smartracks-manifest
-    clean: true
   - checkout: rcu-service
-    clean: true
   - checkout: meta-smartracks
-    clean: true
+  - checkout: smartracks-manifest
   - script: |
       cd $(Build.SourcesDirectory)/smartracks-manifest
       git branch
       git checkout -b main
       repo init -u $(Build.SourcesDirectory)/smartracks-manifest -b main -m smartracks-manifest.xml
       
-      mkdir -p .repo/local_manifests
+      mkdir .repo/local_manifests
       cat > .repo/local_manifests/remove-meta-smartracks.xml <<EOF
       <?xml version="1.0" encoding="UTF-8"?>
       <manifest>
