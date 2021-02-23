@@ -31,5 +31,5 @@ resources:
     volumes:
     - /mnt:/mnt
 
-stages:
+jobs:
  - template: pipeline/steps.yml@script
