@@ -4,9 +4,9 @@ trigger:
 
 resources:
   repositories:
-  - repository: script
+  - repository: smartracks-script
     type: github
-    name: tanchunhau/script
+    name: tanchunhau/smartracks-script
     ref: refs/heads/main
     endpoint: smartracks
   - repository: rcu-service
@@ -32,4 +32,4 @@ resources:
     - /mnt:/mnt   
 
 jobs:
- - template: pipeline/steps.yml@script
+ - template: azure-pipeline-template/ci.yml@smartracks-script
