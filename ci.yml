@@ -2,6 +2,7 @@
 trigger:
 - main
 
+
 resources:
   repositories:
   - repository: script
