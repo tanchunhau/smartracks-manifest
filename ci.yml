@@ -52,8 +52,9 @@ jobs:
       echo "--ls /mnt/argo--"
       ls -l /mnt/argo
       echo "--end ls /mnt/argo--"
-      cd /mnt/argo
-      cd /mnt/us-aus-argo/RnD/SmartRacks/
+      echo "--ls /mnt/argo/RnD--"
+      ls -l /mnt/argo/RnD
+      echo "--end ls /mnt/argo/RnD--"
       cd /mnt/argo/RnD/SmartRacks/
 
       
