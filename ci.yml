@@ -51,4 +51,5 @@ jobs:
       echo "--end ls mnt--"
       cd /mnt/us-aus-argo/RnD/SmartRacks/
       cd /mnt/argo/RnD/SmartRacks/
-      cd /mnt/RnD
+      cd /mnt/argo
+      
