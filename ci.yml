@@ -33,4 +33,17 @@ resources:
 
 
 jobs:
- - template: pipeline/steps.yml@script
+- job: OpenEmbedded_Build_And_Export
+  container: smartracks-build
+  timeoutInMinutes: 3600
+  workspace:
+     clean: all
+  pool:
+    name: Drivers-NIBuildFarm-RFMIBUILD
+    demands:
+      - docker
+      - Agent.OS -equals Linux
+      
+  steps:
+  - script: |
+      rm -d /mnt/us-aus-argo/RnD/SmartRacks/chunhau
