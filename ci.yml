@@ -46,13 +46,9 @@ jobs:
       
   steps:
   - script: |
+      echo "--ls mnt--"
+      ls -l /mnt
+      echo "--end ls mnt--"
       cd /mnt/us-aus-argo/RnD/SmartRacks/
       cd /mnt/argo/RnD/SmartRacks/
-      echo "--ls mnt--"
-      ls /mnt
-      echo "--ls argo--"
-      ls /mnt/argo
-      echo "--ls RnD--"
-      ls /mnt/RnD
-      #echo "ls us-aus-argo"
-      #ls /mnt/us-aus-argo
+      cd /mnt/RnD
