@@ -48,9 +48,11 @@ jobs:
   - script: |
       cd /mnt/us-aus-argo/RnD/SmartRacks/
       cd /mnt/argo/RnD/SmartRacks/
-      ehco "ls mnt"
+      echo "--ls mnt--"
       ls /mnt
-      ehco "ls argo"
+      echo "--ls argo--"
       ls /mnt/argo
-      echo "ls us-aus-argo"
-      ls /mnt/us-aus-argo
+      echo "--ls RnD--"
+      ls /mnt/RnD
+      #echo "ls us-aus-argo"
+      #ls /mnt/us-aus-argo
